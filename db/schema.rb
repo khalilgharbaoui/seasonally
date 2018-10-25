@@ -24,8 +24,8 @@ ActiveRecord::Schema.define(version: 2018_10_25_220853) do
 
   create_table "seasonal_rates", force: :cascade do |t|
     t.bigint "listing_id"
-    t.string "start_date"
-    t.string "end_date"
+    t.datetime "start_date"
+    t.datetime "end_date"
     t.decimal "daily_rate"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

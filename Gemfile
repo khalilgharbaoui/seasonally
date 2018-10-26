@@ -36,7 +36,7 @@ gem 'turbolinks', '~> 5'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
 gem 'will_paginate', '~> 3.1.0'
-gem 'annotate', git: 'https://github.com/ctran/annotate_models.git'
+gem 'annotate'
 gem 'listen', '>= 3.0.5', '< 3.2'
 
 group :development, :test do

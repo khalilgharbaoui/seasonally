@@ -27,7 +27,7 @@ chdir APP_ROOT do
   system 'RAILS_ENV=development bundle exec rails db:drop db:create db:migrate db:seed'
   sleep 1
   puts '==== Running tests ===='
-  system 'bundle exec rspec spec -fd'
+  system 'bundle exec rake spec:services'
   sleep 1
   puts "==== Starting the application server ===="
   system! 'bundle exec rails server -e development'

@@ -80,6 +80,4 @@ test:
 #
 production:
   <<: *default
-  database: seasonally_production
-  username: seasonally
-  password: <%= ENV['SEASONALLY_DATABASE_PASSWORD'] %>
+  url: <%= ENV['DATABASE_URL'] %>

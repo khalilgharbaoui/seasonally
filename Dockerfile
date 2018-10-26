@@ -2,7 +2,7 @@
 FROM ruby:2.5.1-alpine3.7
 
 # Install system dependencies and remove the cache to free up space afterwards
-RUN apk --update add --virtual build-dependencies build-base ruby-dev postgresql-dev postgresql-client libc-dev linux-headers nodejs yarn tzdata bash && rm -rf /var/cache/lists/*_*
+RUN apk --update add --virtual build-dependencies build-base ruby-dev postgresql-dev postgresql-client linux-headers nodejs yarn tzdata bash && rm -rf /var/cache/lists/*_*
 
 # Add the Gemfile and Gemfile.lock from our app
 ADD Gemfile /app/

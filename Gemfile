@@ -37,6 +37,8 @@ gem 'turbolinks', '~> 5'
 gem 'bootsnap', '>= 1.1.0', require: false
 gem 'will_paginate', '~> 3.1.0'
 gem 'annotate'
+gem 'rack-mini-profiler', require: false
+
 gem 'listen', '>= 3.0.5', '< 3.2'
 
 group :development, :test do
@@ -55,7 +57,6 @@ group :development do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'meta_request'
-  gem 'rack-mini-profiler', require: false
   # For memory profiling
   gem 'memory_profiler'
   # For call-stack profiling flamegraphs

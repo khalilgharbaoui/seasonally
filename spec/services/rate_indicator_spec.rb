@@ -7,7 +7,7 @@ RSpec.describe 'RateIndicator.total' do
 
   # camper1_seasonal_rate = FactoryBot.build(:seasonal_rate, listing: camper1,
   #                                       start_date: DateTime.new(2018,07,01),
-  #                                       start_date: DateTime.new(2018,09,01),
+  #                                       end_date: DateTime.new(2018,09,01),
   #                                       daily_rate: 150)
   before(:all) do
     @listing = FactoryBot.build(:listing)

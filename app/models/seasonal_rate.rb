@@ -20,5 +20,5 @@
 #
 
 class SeasonalRate < ApplicationRecord
-  belongs_to :listing
+  belongs_to :listing, touch: true
 end

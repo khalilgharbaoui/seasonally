@@ -10,4 +10,6 @@
 #
 
 class Listing < ApplicationRecord
+  has_one :seasonal_rate
+  # can be many, but I'm keeping it simple for the sake of this demo!
 end

@@ -22,8 +22,8 @@
           <td><%= listing.title %></td>
           <td><%= listing.default_daily_rate %></td>
           <%# just for experimentation with caches i used the dates from Case3 %>
-          <td><%= rate(listing, DateTime.new(2018,6,30), DateTime.new(2018,7,9)).round(2) %></td>
           <td><%= average(listing, DateTime.new(2018,6,30), DateTime.new(2018,7,9)).round(2) %></td>
+          <td><%= rate(listing, DateTime.new(2018,6,30), DateTime.new(2018,7,9)).round(2) %></td>
           <td><%= link_to 'Show', listing %></td>
           <td><%= link_to 'Edit', edit_listing_path(listing) %></td>
           <td><%= link_to 'Destroy', listing, method: :delete, data: { confirm: 'Are you sure?' } %></td>

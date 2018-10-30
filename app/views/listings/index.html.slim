@@ -1,0 +1,43 @@
+p#notice
+  = notice
+h1
+  | Listings
+table
+  thead
+    tr
+      th
+        | Id
+      th
+        | Title
+      th
+        | Default daily rate (2018-6-30 => 2018-7-9)
+      th
+        | Average daily rate (2018-6-30 => 2018-7-9)
+      th
+        | Rate
+      th[colspan="3"]
+  tbody
+    - @listings.each do |listing|
+      - cache listing do
+        tr
+          td
+            = listing.id
+          td
+            = listing.title
+          td
+            = listing.default_daily_rate
+          - # just for experimentation with caches i used the dates from Case3
+          td
+            = average(listing, DateTime.new(2018,6,30), DateTime.new(2018,7,9)).round(2)
+          td
+            = rate(listing, DateTime.new(2018,6,30), DateTime.new(2018,7,9)).round(2)
+          td
+            = link_to 'Show', listing
+          td
+            = link_to 'Edit', edit_listing_path(listing)
+          td
+            = link_to 'Destroy', listing, method: :delete, data: { confirm: 'Are you sure?' }
+br
+= will_paginate @listings
+br
+= link_to 'New Listing', new_listing_path

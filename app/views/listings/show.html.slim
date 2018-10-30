@@ -1,0 +1,25 @@
+p#notice
+  = notice
+p
+  strong
+    | Id:
+  = @listing.id
+p
+  strong
+    | Title:
+  = @listing.title
+p
+  strong
+    | Default daily rate:
+  = @listing.default_daily_rate
+p
+  strong
+    | Average daily rate:
+  = average(@listing, DateTime.new(2018,6,30), DateTime.new(2018,7,9)).round(2)
+p
+  strong
+    | Rate:
+  = rate(@listing, DateTime.new(2018,6,30), DateTime.new(2018,7,9)).round(2)
+= link_to 'Edit', edit_listing_path(@listing)
+|  | 
+= link_to 'Back', listings_path
